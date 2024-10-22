@@ -1,0 +1,10 @@
+command: [
+  "python", 
+  "app.py"
+]
+
+env:
+  - name: "SERVING_ENDPOINT"
+    valueFrom: "serving-endpoint"
+  - name: "DATABRICKS_WAREHOUSE_ID"
+    valueFrom: "sql-warehouse"

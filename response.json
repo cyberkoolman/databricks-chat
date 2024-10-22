@@ -1,0 +1,62 @@
+{'manifest': {'chunks': [
+            {'byte_count': 3408, 'chunk_index': 0, 'row_count': 1, 'row_offset': 0
+            }
+        ], 'schema': {'column_count': 22, 'columns': [
+                {'name': 'ReportingDateKey', 'position': 0, 'type_name': 'DATE', 'type_text': 'DATE'
+                },
+                {'name': 'GeoLocationKey', 'position': 1, 
+'type_name': 'STRING', 'type_text': 'STRING'
+                },
+                {'name': 'Population', 'position': 2, 'type_name': 'DECIMAL', 'type_precision': 28, 'type_scale': 0, 'type_text': 'DECIMAL(28,
+                    0)'
+                },
+                {'name': 'MemorialAttendance', 'position': 3, 'type_name': 'INT', 'type_text': 'INT'
+                },
+                {'name': 'Baptized', 'position': 4, 'type_name': 'INT', 'type_text': 'INT'
+                },
+                {'name': 'PeakPublishers', 'position': 5, 'type_name': 'INT', 'type_text': 'INT'
+                },
+                {'name': 'AveragePublishers', 'position': 6, 'type_name': 'DECIMAL', 'type_precision': 28, 'type_scale': 0, 'type_text': 'DECIMAL(28,
+                    0)'
+                },
+                {'name': 'Pioneers', 'position': 7, 'type_name': 'DECIMAL', 'type_precision': 28, 'type_scale': 0, 'type_text': 'DECIMAL(28,
+                    0)'
+                },
+                {'name': 'Congregations', 'position': 8, 'type_name': 'INT', 'type_text': 'INT'
+                },
+                {'name': 'BibleStudies', 'position': 9, 'type_name': 'DECIMAL', 'type_precision': 28, 'type_scale': 0, 'type_text': 'DECIMAL(28,
+                    0)'
+                },
+                {'name': 'PeakTotalPublishers', 'position': 10, 'type_name': 'INT', 'type_text': 'INT'
+                },
+                {'name': 'TotalAveragePublishers', 'position': 11, 'type_name': 'DECIMAL', 'type_precision': 28, 'type_scale': 0, 'type_text': 'DECIMAL(28,
+                    0)'
+                },
+                {'name': 'GeoLocationKey', 'position': 12, 'type_name': 'STRING', 'type_text': 'STRING'
+                },
+                {'name': 'GeoNumber', 'position': 13, 'type_name': 'INT', 'type_text': 'INT'
+                },
+                {'name': 'GeoName', 'position': 14, 'type_name': 'STRING', 'type_text': 'STRING'
+                },
+                {'name': 'GeoCode', 'position': 15, 'type_name': 'STRING', 'type_text': 'STRING'
+                },
+                {'name': 'GeoLocationYearbookName', 'position': 16, 'type_name': 'STRING', 'type_text': 'STRING'
+                },
+                {'name': 'GeographicalRegion', 'position': 17, 
+'type_name': 'STRING', 'type_text': 'STRING'
+                },
+                {'name': 'GeographicalSubRegion', 'position': 18, 'type_name': 'STRING', 'type_text': 'STRING'
+                },
+                {'name': 'CountryCode', 'position': 19, 'type_name': 'STRING', 'type_text': 'STRING'
+                },
+                {'name': 'CountryName', 'position': 20, 
+'type_name': 'STRING', 'type_text': 'STRING'
+                },
+                {'name': 'CountryISOAlphaIICode', 'position': 21, 'type_name': 'STRING', 'type_text': 'STRING'
+                }
+            ]
+        }, 'total_byte_count': 3408, 'total_chunk_count': 1, 'total_row_count': 1, 'truncated': False
+    }, 'result': {'chunk_index': 0, 'row_count': 1, 'row_offset': 0
+    }, 'statement_id': '01ef8e15-a8d9-16f4-9c13-c7432fcdf7a2', 'status': {'state': 'SUCCEEDED'
+    }
+}
