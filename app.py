@@ -4,7 +4,7 @@ from databricks.sdk import WorkspaceClient
 from databricks.sdk.service.dashboards import GenieAPI
 from databricks.sdk.service.dashboards import GenieMessage
 from databricks.sdk.service.sql import StatementExecutionAPI
-from pyspark.sql import SparkSession
+
 import pandas as pd
 
 from decouple import config
@@ -37,10 +37,11 @@ space_id = '01ef6d284bf211369b3a182d7b37ed23'
 # genie_message = g.wait_get_message_genie_completed(conversation_id=conversation_id, message_id=message_id, space_id=space_id)
 
 # APPROACH 3: Documentation says to check the query result
-genie_waiter = g.start_conversation(space_id=space_id, content='What is the annual reports for Spain?')
+first_question = "What are the top 3 countries by pioneer growth rate over the last 3 years?"
+genie_waiter = g.start_conversation(space_id=space_id, content=first_question)
 conversation_id = genie_waiter.response.conversation_id
 message_id = genie_waiter.response.message_id
-time.sleep(7)
+time.sleep(10)
 
 genie_response = g.get_message_query_result(space_id=space_id, conversation_id=conversation_id, message_id=message_id)
 resp = genie_response.statement_response
@@ -78,7 +79,8 @@ rows = [[str(c) for c in r] for r in result_row_data['data_array']]
 columns = [c['name'] for c in meta['schema']['columns']]
 #     # df = spark.createDataFrame(rows, schema=columns)
 df = pd.DataFrame(rows, columns=columns)
-print(df)
+with pd.option_context('display.max_columns', None):
+    print(df)
 
 
 # output_data = result_data.as_dict()
@@ -87,12 +89,12 @@ print(df)
 
 
 
-result_response = g.execute_message_query(space_id=space_id, conversation_id=conversation_id, message_id=message_id)
-print(result_response)
-time.sleep(5)
+# result_response = g.execute_message_query(space_id=space_id, conversation_id=conversation_id, message_id=message_id)
+# print(result_response)
+# time.sleep(5)
 
-result_response = g.execute_message_query(space_id=space_id, conversation_id=conversation_id, message_id=message_id)
-print(result_response.as_dict())
+# result_response = g.execute_message_query(space_id=space_id, conversation_id=conversation_id, message_id=message_id)
+# print(result_response.as_dict())
 
 
 # genie_message = g.create_message(space_id='space_id', conversation_id='conversation_id', content='What is the annual reports for Korea?')

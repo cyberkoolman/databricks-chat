@@ -1,2 +1,3 @@
 databricks-sdk
 python-decouple
+pandas
